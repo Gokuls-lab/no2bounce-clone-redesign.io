@@ -1,0 +1,10 @@
+User-agent: *
+ 
+Allow: /
+Disallow: /https://www.no2bounce.com/blog?e76a8b54_page=1
+Disallow: /https://www.no2bounce.com/blog?e76a8b54_page=2
+Disallow: /https://www.no2bounce.com/blog?e76a8b54_page=3
+Disallow: /https://www.no2bounce.com/blog?e76a8b54_page=4
+Disallow: /https://www.no2bounce.com/blog?e76a8b54_page=5
+
+Sitemap: https://www.no2bounce.com/sitemap.xml
