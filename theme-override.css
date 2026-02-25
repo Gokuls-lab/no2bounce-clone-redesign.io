@@ -1,0 +1,672 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap');
+
+/* ============================================================
+   THEME OVERRIDE — Light Premium Theme for Webflow Pages
+   Keeps all original layout/content, overrides visual appearance
+   ============================================================ */
+
+:root {
+    --n2b-font-h: 'Plus Jakarta Sans', sans-serif;
+    --n2b-font-b: 'Inter', sans-serif;
+    --n2b-bg: #F8FAFC;
+    --n2b-white: #FFFFFF;
+    --n2b-text: #0F172A;
+    --n2b-muted: #64748B;
+    --n2b-primary: #2563EB;
+    --n2b-primary-glow: rgba(37, 99, 235, 0.3);
+    --n2b-cyan: #06B6D4;
+    --n2b-border: #E2E8F0;
+    --n2b-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --n2b-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    --n2b-shadow-3d: 0 30px 60px -12px rgba(37, 99, 235, 0.15), 0 18px 36px -18px rgba(0, 0, 0, 0.1);
+    --n2b-radius: 24px;
+}
+
+/* ======================== GLOBAL ======================== */
+
+body {
+    background: var(--n2b-bg) !important;
+    color: var(--n2b-text) !important;
+    font-family: var(--n2b-font-b) !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Background grid (only if .bg-grid div exists) */
+.bg-grid {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(circle at center, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black, transparent 80%);
+}
+
+
+/* ======================== TYPOGRAPHY ======================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-3,
+.heading-11,
+.div-heading,
+.div-heading-2,
+.title,
+.text-26,
+.text-27,
+.text-29,
+.text-32,
+.text-36,
+.text-38,
+.text-43,
+.coverage-title,
+.uui-faq01_heading,
+.faq-h4 {
+    font-family: var(--n2b-font-h) !important;
+    color: var(--n2b-text) !important;
+    letter-spacing: -0.02em;
+}
+
+p,
+span,
+li,
+a,
+div,
+.text-25,
+.text-28,
+.text-30,
+.text-33,
+.text-37,
+.text-39,
+.text-42,
+.text-desc,
+.uui-text-size-medium-2,
+.uui-text-size-small,
+.coverage-subtitle,
+.coverage-footer,
+.text-block-8,
+.banner-text {
+    font-family: var(--n2b-font-b) !important;
+}
+
+/* Body text in muted color */
+.text-25,
+.text-28,
+.text-33,
+.text-37,
+.text-42,
+.text-desc,
+.text-block-8,
+.uui-text-size-medium-2,
+.uui-text-size-small,
+.uui-text-size-small-2,
+.coverage-subtitle,
+.coverage-footer {
+    color: var(--n2b-muted) !important;
+}
+
+
+/* ======================== HERO SECTIONS ======================== */
+
+.catch-all-emails,
+.email-verification,
+.email-sender-hero,
+.email-cleaner-section,
+.email-finder-hero,
+[class*="-hero"],
+[class*="emails"] {
+    background: var(--n2b-bg) !important;
+    color: var(--n2b-text) !important;
+}
+
+.hero-content,
+.hero-title,
+.title-catch-all {
+    color: var(--n2b-text) !important;
+}
+
+.hero-title,
+.heading-3 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.05 !important;
+    color: var(--n2b-text) !important;
+}
+
+
+/* ======================== CONTENT BLOCKS ======================== */
+
+/* Two-column feature blocks */
+.risky-email-verification,
+.smtp-catch-all,
+.instant-results,
+.free-analysis,
+.about-us-2,
+.plans-pricing,
+.no2bounce-companies,
+.integration-hero,
+[class*="section"],
+[class*="feature"] {
+    background: transparent !important;
+}
+
+/* Make sure alternating section backgrounds look clean */
+.risky-email-verification,
+.free-analysis,
+.instant-results,
+.coverage-section {
+    background: var(--n2b-white) !important;
+    border-radius: 40px;
+    margin: 40px auto;
+    max-width: 1300px;
+}
+
+
+/* ======================== CARDS & CONTAINERS ======================== */
+
+/* Provider cards, feature items */
+.provider-card {
+    background: var(--n2b-white) !important;
+    border: 1px solid var(--n2b-border) !important;
+    border-radius: 16px !important;
+    box-shadow: var(--n2b-shadow-sm) !important;
+    transition: all 0.3s ease !important;
+}
+
+.provider-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: var(--n2b-shadow-lg) !important;
+    border-color: var(--n2b-primary) !important;
+}
+
+/* Feature/stat cards */
+.frame-563,
+.frame-564,
+.frame-565,
+.frame-566 {
+    /* Keep their layout, just ensure colors */
+    color: var(--n2b-text) !important;
+}
+
+.about-us-wrapper-2 {
+    background: var(--n2b-white) !important;
+    border-radius: var(--n2b-radius) !important;
+    border: 1px solid var(--n2b-border) !important;
+    box-shadow: var(--n2b-shadow-sm) !important;
+}
+
+
+/* ======================== FAQ SECTION ======================== */
+
+.uui-faq01_accordion {
+    background: var(--n2b-white) !important;
+    border: 1px solid var(--n2b-border) !important;
+    border-radius: 16px !important;
+    margin-bottom: 12px !important;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+}
+
+.uui-faq01_accordion:hover {
+    box-shadow: var(--n2b-shadow-sm) !important;
+}
+
+.uui-faq01_question {
+    padding: 24px 28px !important;
+}
+
+.uui-faq01_heading {
+    font-weight: 700 !important;
+}
+
+.accordion-icon_horizontal-line,
+.accordion-icon_vertical-line {
+    background-color: var(--n2b-primary) !important;
+}
+
+
+/* ======================== BUTTONS / CTA ======================== */
+
+.cta-btn,
+.signup .cta-btn {
+    background: var(--n2b-text) !important;
+    color: white !important;
+    border-radius: 100px !important;
+    font-family: var(--n2b-font-h) !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.3) !important;
+    border: none !important;
+    transition: all 0.3s !important;
+}
+
+/* Force all text inside buttons to be white to fix readability */
+.cta-btn *,
+.signup .cta-btn *,
+.free-button *,
+.nav-btn *,
+.buy-btn * {
+    color: white !important;
+}
+
+.cta-btn:hover,
+.signup:hover .cta-btn {
+    background: var(--n2b-primary) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px var(--n2b-primary-glow) !important;
+}
+
+.free-button {
+    background: var(--n2b-primary) !important;
+    border-radius: 100px !important;
+    color: white !important;
+}
+
+/* Badge/Clay link styling */
+.shiny-wrap,
+.badge-logo {
+    /* Keep original functionality */
+}
+
+
+/* ======================== CTA BANNER ======================== */
+
+.n2b-banner {
+    background: linear-gradient(135deg, var(--n2b-primary), var(--n2b-cyan)) !important;
+    border-radius: 40px !important;
+    margin: 60px auto !important;
+    max-width: 1200px !important;
+    overflow: hidden;
+}
+
+.n2b-banner .text-29,
+.n2b-banner .text-30,
+.n2b-banner .text-31 {
+    color: white !important;
+}
+
+
+/* ======================== FOOTER BAR ======================== */
+
+.footer-bar {
+    background: var(--n2b-white) !important;
+    border-top: 1px solid var(--n2b-border) !important;
+    border-bottom: 1px solid var(--n2b-border) !important;
+}
+
+.footer-bar .text-17 {
+    color: var(--n2b-text) !important;
+}
+
+
+/* ======================== FOOTER OVERRIDE ======================== */
+
+/* Hide old Webflow footers */
+.footer:not(#n2b-new-footer),
+footer:not(#n2b-new-footer),
+.footer-bar,
+.uui-footer05_component,
+.uui-footer05_layout {
+    display: none !important;
+}
+
+#n2b-new-footer {
+    display: block !important;
+    background: #020617 !important;
+    border-radius: 60px 60px 0 0 !important;
+    margin-top: 60px !important;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0 40px;
+}
+
+#n2b-new-footer::before {
+    content: '';
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Footer link colors */
+.uui-footer05_link,
+.ft-link,
+#n2b-new-footer a {
+    color: #94a3b8 !important;
+    transition: color 0.3s !important;
+}
+
+.uui-footer05_link:hover,
+.ft-link:hover,
+#n2b-new-footer a:hover {
+    color: white !important;
+}
+
+.uui-footer05_link-list-heading,
+.ft-heading,
+#n2b-new-footer h5 {
+    font-family: var(--n2b-font-h) !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+#n2b-new-footer p,
+#n2b-new-footer .address,
+#n2b-new-footer .text-color-gray500 {
+    color: #94a3b8 !important;
+}
+
+
+/* ======================== OLD NAVBAR HIDE ======================== */
+
+/* Hide old Webflow navbar — new nav-wrap takes over */
+.navbar.uui-navbar05_component,
+.uui-navbar05_component,
+div[data-animation="default"].navbar {
+    display: none !important;
+}
+
+
+/* ======================== NEW FLOATING NAV ======================== */
+
+.nav-wrap {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.nav-wrap .nav {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 12px 8px 24px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: var(--n2b-shadow-lg);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-wrap .nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-wrap .nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--n2b-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-wrap .nav-links a:hover {
+    color: var(--n2b-text);
+}
+
+.nav-wrap .nav-btn {
+    background: var(--n2b-text);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.3);
+    transition: all 0.3s;
+}
+
+.nav-wrap .nav-btn:hover {
+    background: var(--n2b-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px var(--n2b-primary-glow);
+}
+
+@media (max-width: 768px) {
+    .nav-wrap .nav-links {
+        display: none;
+    }
+}
+
+
+/* ======================== LOGO CAROUSEL ======================== */
+
+.no2bounce-companies {
+    background: transparent !important;
+}
+
+.clients-text {
+    color: var(--n2b-muted) !important;
+    font-family: var(--n2b-font-b) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px !important;
+}
+
+
+/* ======================== IMAGES ======================== */
+
+.n2b-demo {
+    border-radius: var(--n2b-radius) !important;
+    box-shadow: var(--n2b-shadow-3d) !important;
+}
+
+.image-28,
+.image-30,
+.image-34,
+.image-32 {
+    border-radius: 20px !important;
+}
+
+
+/* ======================== PRICING (keep original interactive JS) ======================== */
+
+.pricing-card {
+    border-radius: 20px !important;
+    border: 1px solid var(--n2b-primary) !important;
+    background: var(--n2b-white) !important;
+}
+
+.option {
+    border-radius: 12px !important;
+    transition: all 0.2s !important;
+}
+
+.option.active {
+    border-color: var(--n2b-primary) !important;
+    background: #eff6ff !important;
+    color: var(--n2b-primary) !important;
+}
+
+.buy-btn {
+    background: var(--n2b-text) !important;
+    color: white !important;
+    border-radius: 100px !important;
+    font-weight: 700 !important;
+}
+
+.buy-btn:hover {
+    background: var(--n2b-primary) !important;
+}
+
+
+/* ======================== POPUP / STICKY — KEEP HIDDEN ======================== */
+
+.popup-overlay,
+.popup-banner,
+.sticky-button {
+    /* Keep original JS behavior, don't interfere */
+}
+
+
+/* ======================== COMPARISON TABLES ======================== */
+
+.comparison-table,
+table {
+    border-radius: 16px !important;
+    overflow: hidden;
+    border: 1px solid var(--n2b-border) !important;
+}
+
+th {
+    background: var(--n2b-bg) !important;
+    font-family: var(--n2b-font-h) !important;
+    font-weight: 700 !important;
+    color: var(--n2b-text) !important;
+}
+
+td {
+    color: var(--n2b-muted) !important;
+}
+
+
+/* ======================== LEGAL / LONG-FORM PAGES ======================== */
+
+.terms-and-conditions,
+.privacy-policy-page,
+.cookie-policy {
+    background: var(--n2b-white) !important;
+    border-radius: 32px;
+    max-width: 900px;
+    margin: 120px auto 60px;
+    padding: 60px;
+    box-shadow: var(--n2b-shadow-sm);
+}
+
+.rich-text-block,
+.w-richtext {
+    font-family: var(--n2b-font-b) !important;
+    color: var(--n2b-muted) !important;
+    line-height: 1.8 !important;
+}
+
+.rich-text-block h2,
+.w-richtext h2 {
+    font-family: var(--n2b-font-h) !important;
+    color: var(--n2b-text) !important;
+    margin-top: 40px;
+}
+
+.rich-text-block a,
+.w-richtext a {
+    color: var(--n2b-primary) !important;
+}
+
+/* ======================== NEW FOOTER INTERNAL LAYOUT ======================== */
+
+.ft-huge {
+    font-family: var(--n2b-font-h);
+    font-size: clamp(4rem, 10vw, 12rem);
+    font-weight: 800;
+    line-height: 0.9;
+    text-align: center;
+    margin-bottom: 80px;
+    letter-spacing: -0.05em;
+    background: linear-gradient(180deg, #fff, #475569);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.ft-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.ft-brand p {
+    color: #94a3b8;
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.ft-socials {
+    margin-top: 24px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.ft-socials a {
+    color: #94a3b8;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.ft-socials a:hover {
+    color: #06B6D4;
+}
+
+.ft-col h5 {
+    font-family: var(--n2b-font-h);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.ft-sub-group {
+    margin-top: 32px;
+}
+
+.ft-col a {
+    display: block;
+    color: #94a3b8;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    text-decoration: none;
+}
+
+.ft-col a:hover {
+    color: white;
+    transform: translateX(4px);
+}
+
+.ft-bottom {
+    margin-top: 80px;
+    padding: 32px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    color: #64748b;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .ft-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ft-grid {
+        grid-template-columns: 1fr;
+    }
+}
